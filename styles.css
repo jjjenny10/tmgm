@@ -113,11 +113,16 @@ h2{font-size:clamp(1.8rem,4vw,3rem);font-weight:900;margin-bottom:20px}
 .pcard-cap p{font-size:.82rem;opacity:.7}
 
 /* ===== Awards ===== */
-.awards{padding:60px 0;border-top:1px solid rgba(255,255,255,.06)}
-.awards-row{display:flex;justify-content:center;flex-wrap:wrap;gap:40px;margin-top:16px}
-.aw{text-align:center}
-.aw strong{display:block;font-size:1.2rem;color:#ffbe5b}
-.aw span{font-size:.82rem;opacity:.55}
+.awards{padding:80px 0;border-top:1px solid rgba(255,255,255,.06);text-align:center}
+.awards h2{margin-bottom:40px}
+.awards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;align-items:stretch}
+.award-card{border-radius:16px;padding:36px 20px;text-align:center;transition:transform .3s,box-shadow .3s}
+.award-card:hover{transform:translateY(-4px)}
+.award-card--stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);box-shadow:0 4px 20px rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;gap:10px}
+.award-card--stat:hover{background:rgba(255,255,255,.08);box-shadow:0 8px 30px rgba(0,0,0,.3)}
+.award-icon{font-size:2.4rem;margin-bottom:4px}
+.award-card--stat strong{font-size:1.15rem;color:#ffbe5b;line-height:1.4}
+.award-card--stat span{font-size:.82rem;opacity:.55;line-height:1.6}
 
 /* ===== Footer ===== */
 .footer{background:#06101c;padding:48px 0 24px;font-size:.85rem}
@@ -149,6 +154,7 @@ h2{font-size:clamp(1.8rem,4vw,3rem);font-weight:900;margin-bottom:20px}
   .partner-row{grid-template-columns:1fr}
   .ft-grid{grid-template-columns:1fr 1fr}
   .prod-grid{grid-template-columns:repeat(2,1fr)}
+  .awards-grid{grid-template-columns:repeat(2,1fr)}
   .timeline-wrap{grid-template-columns:1fr;gap:16px}
   .tl-left{grid-column:1}
   .tl-right{grid-column:1}
@@ -158,4 +164,5 @@ h2{font-size:clamp(1.8rem,4vw,3rem);font-weight:900;margin-bottom:20px}
   .ft-grid{grid-template-columns:1fr}
   .num-row{flex-direction:column;align-items:center;gap:20px}
   .prod-grid{grid-template-columns:1fr}
+  .awards-grid{grid-template-columns:1fr}
 }
